@@ -1,6 +1,5 @@
 import React from "react";
 import { FormWrapper } from "./FormWrapper";
-import { useTranslation } from "react-i18next"
 
 // type UserData = {
 //   firstName: string;
@@ -23,10 +22,9 @@ interface UserFormProps extends UserData {
 }
 
 export function UserForm({ firstName, lastName, age, updateFields }: UserFormProps) {
-  const { t } = useTranslation(['common']);
 
   return (
-    <FormWrapper title={t('title')}>
+    <FormWrapper title='title'>
       <label>First Name</label>
       <input
         autoFocus
