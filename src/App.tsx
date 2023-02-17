@@ -5,6 +5,8 @@ import { useMultistepForm } from "./hooks/useMultistepForm";
 import { UserForm } from "./UserForm";
 import { AccountForm } from "./AccountForm";
 import { AddressForm } from "./AddressForm";
+import { useTranslation} from "react-i18next";
+import './i18n/config';
 
 type FormData = {
   firstName: string;
@@ -32,6 +34,7 @@ const INITIAL_DATA: FormData = {
 
 function App() {
   const [data, setData] = useState(INITIAL_DATA);
+  const { t } = useTranslation('userform');
   const updateFields = (fields: Partial<FormData>) => {
     setData(prev => {
       return {
@@ -84,10 +87,10 @@ function App() {
         }}>
           { !isFirstStep && (
             <button type="button" onClick={back}>
-              Back
+              {t('back')}
             </button>)}
           <button type="button" onClick={next}>
-            {isLastStep ? 'finish' : 'next'}
+            {isLastStep ? 'finish' : t('next') }
           </button>
         </div>
       </form>
