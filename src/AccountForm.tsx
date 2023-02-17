@@ -1,14 +1,24 @@
 import React from "react";
 import { FormWrapper } from "./FormWrapper";
 
-type AccountData = {
+// type AccountData = {
+//   email: string;
+//   password: string;
+// };
+//
+// type AccountFormProps = AccountData & {
+//   updateFields: (fields: Partial<AccountData>) => void;
+// }
+
+interface AccounData {
   email: string;
   password: string;
-};
-
-type AccountFormProps = AccountData & {
-  updateFields: (fields: Partial<AccountData>) => void;
 }
+
+interface AccountFormProps extends AccounData {
+  updateFields: (fields: Partial<AccounData>) => void;
+}
+
 export function AccountForm({ email, password, updateFields}: AccountFormProps) {
   return (
     <FormWrapper title="Account">

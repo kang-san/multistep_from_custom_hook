@@ -6,7 +6,19 @@ import { UserForm } from "./UserForm";
 import { AccountForm } from "./AccountForm";
 import { AddressForm } from "./AddressForm";
 
-type FormData = {
+// type FormData = {
+//   firstName: string;
+//   lastName: string;
+//   age: number;
+//   email: string;
+//   password: string;
+//   street: string;
+//   city: string;
+//   state: string;
+//   zip: string;
+// }
+
+interface FormData {
   firstName: string;
   lastName: string;
   age: number;

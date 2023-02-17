@@ -1,16 +1,28 @@
 import React from 'react';
 import { FormWrapper } from "./FormWrapper";
 
-type AddressData = {
+// type AddressData = {
+//   street: string;
+//   city: string;
+//   state: string;
+//   zip: string;
+// }
+//
+// type AddressFormProps = AddressData & {
+//   updateFields: (fields: Partial<AddressData>) => void;
+// }
+
+interface AddressData {
   street: string;
   city: string;
   state: string;
   zip: string;
 }
 
-type AddressFormProps = AddressData & {
+interface AddressFormProps extends AddressData {
   updateFields: (fields: Partial<AddressData>) => void;
 }
+
 export function AddressForm({ street, city, state, zip, updateFields}: AddressFormProps) {
   return(
     <FormWrapper title="Address">
