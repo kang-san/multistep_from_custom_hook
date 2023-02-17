@@ -2,13 +2,23 @@ import React from "react";
 import { FormWrapper } from "./FormWrapper";
 import { useTranslation } from "react-i18next"
 
-type UserData = {
+// type UserData = {
+//   firstName: string;
+//   lastName: string;
+//   age: number;
+// }
+
+interface UserData {
   firstName: string;
   lastName: string;
   age: number;
 }
 
-type UserFormProps = UserData & {
+// type UserFormProps = UserData & {
+//   updateFields: (fields: Partial<UserData>) => void;
+// }
+
+interface UserFormProps extends UserData {
   updateFields: (fields: Partial<UserData>) => void;
 }
 

@@ -8,7 +8,19 @@ import { AddressForm } from "./AddressForm";
 import { useTranslation} from "react-i18next";
 import './i18n/config';
 
-type FormData = {
+// type FormData = {
+//   firstName: string;
+//   lastName: string;
+//   age: number;
+//   email: string;
+//   password: string;
+//   street: string;
+//   city: string;
+//   state: string;
+//   zip: string;
+// }
+
+interface FormData {
   firstName: string;
   lastName: string;
   age: number;
